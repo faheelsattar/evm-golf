@@ -1,0 +1,38 @@
+# Minimal runtime bytecode to return the total supply of sUSD, save it to storage, 
+# along with who made the query, and the timestamp of the query.
+
+
+# slot 0 => timestamp
+timestamp
+returndatasize
+sstore
+
+# slot 1 => msg.sender
+caller
+push1 1
+sstore
+
+# etk helps you compute function signatures right of the bat
+%push(selector("totalSupply()"))
+returndatasize
+mstore
+
+# call totalSupply on sUSD
+push1 20
+returndatasize
+push1 4
+returndatasize
+push20 0x57Ab1ec28D129707052df4dF418D58a2D46d5f51 #sUSD mainnet
+gas
+staticcall
+
+#slot 3 => totalSupply
+returndatasize
+mload
+push1 3
+sstore
+
+#return totalSupply from the memory
+push1 20
+returndatasize
+return
