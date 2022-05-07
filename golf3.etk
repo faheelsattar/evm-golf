@@ -1,0 +1,31 @@
+# Minimal runtime bytecode for a contract that returns “world” 
+# if the input is “hello”, 42 otherwise.
+#author: @721Orbit
+
+push5 0x68656c6c6f #hello   
+returndatasize
+calldataload
+  
+push5 0x776f726c64 #world
+returndatasize
+mstore
+
+push1 0xd8
+shr
+
+push1 0x42
+push1 0x32
+mstore
+
+eq
+push1 0x20
+jumpi
+
+push1 0x32
+dup1
+return
+
+jumpdest
+push1 0x32
+returndatasize
+return
