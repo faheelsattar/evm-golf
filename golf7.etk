@@ -1,6 +1,8 @@
 # minimum bytecode Fibonacci series simulator. Keep stepping into 
 # the debugger and the memory will start displaying the next number in the series
 # @author: 721Orbit
+# @dev: i was kinda lazy to stop the loop at a certain index from calldata, 
+# anyone interested can go and return the number from memory :)
 
 
 push1 1
