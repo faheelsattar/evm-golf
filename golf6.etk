@@ -1,0 +1,46 @@
+# Minimal runtime bytecode for a contract that returns the 
+# square root of the calldata as a uint.
+# @author: @721Orbit
+
+chainid
+
+jumpdest
+chainid
+add
+chainid
+dup2
+dup1
+mul
+returndatasize
+calldataload
+lt               
+push1
+jumpi
+pop
+
+returndatasize
+dup2
+dup1
+mul
+returndatasize
+calldataload
+eq
+                
+push1 30
+jumpi
+pop
+
+push1 2
+chainid
+jumpi
+
+jumpdest
+swap1
+sub
+returndatasize
+mstore
+
+push1 32
+returndatasize
+return
+
