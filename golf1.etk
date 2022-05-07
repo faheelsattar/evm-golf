@@ -1,0 +1,12 @@
+#What is the minimum runtime bytecode of a contract that returns 
+#the current block number if called?
+
+#store in memory
+number
+returndatasize #cheap workaroud to push 0 on the stack if no external call made
+mstore
+
+#return from memory
+push1 32
+returndatasize
+return
