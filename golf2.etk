@@ -1,5 +1,6 @@
 # Minimal runtime bytecode to return the total supply of sUSD, save it to storage, 
 # along with who made the query, and the timestamp of the query.
+# author: @721Orbit
 
 
 # slot 0 => timestamp
