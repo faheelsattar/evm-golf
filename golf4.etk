@@ -1,0 +1,40 @@
+# Minimum runtime bytecode for a contract that returns true 
+# if the input is a prime number, false otherwise.
+# @author : @721Orbit
+
+chainid
+
+jumpdest #loop
+chainid
+add
+dup1
+returndatasize
+calldataload
+gt # 0 ? break : loop
+returndatasize
+eq
+push1 26
+jumpi
+dup1
+returndatasize
+calldataload
+mod # 0 ? ~prime : prime
+chainid
+jumpi
+
+# ~prime return false
+returndatasize
+returndatasize
+mstore
+push1 32
+returndatasize
+return
+
+# ~prime return true
+jumpdest
+chainid
+returndatasize
+mstore
+push1 32
+returndatasize
+return
