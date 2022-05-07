@@ -1,6 +1,6 @@
 # What is the minimum runtime bytecode of a contract that returns 
 # the current block number if called?
-# author: @721Orbit
+# @author: @721Orbit
 
 #store in memory
 number

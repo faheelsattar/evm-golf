@@ -1,6 +1,6 @@
 # Minimal runtime bytecode for a contract that returns “world” 
 # if the input is “hello”, 42 otherwise.
-# author: @721Orbit
+# @author: @721Orbit
 
 push5 0x68656c6c6f #hello   
 returndatasize
