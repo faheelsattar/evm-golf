@@ -1,0 +1,18 @@
+# minimum bytecode Fibonacci series simulator. Keep stepping into 
+# the debugger and the memory will start displaying the next number in the series
+# @author: 721Orbit
+
+
+push1 1
+returndatasize
+
+jumpdest
+dup2 #to replicate next so we can use it in next iter
+add
+dup1 #so that we dont need to mload later saves alot of gas
+returndatasize #cheap push1 0
+mstore  #store next number in the series to memeory
+swap1   #swap so that we can acheive prev + next
+push1 0x1
+push1 0x3
+jumpi #jump to 3(jumpdest)
