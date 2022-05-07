@@ -1,0 +1,31 @@
+# Minimal runtime bytecode for a contract that creates a copy of 
+# itself and returns the offspring address whenever interacted 
+# with anything other than zero, otherwise self destructs.
+# @author: @721Orbit
+
+returndatasize 
+calldataload
+iszero      
+push1 20    
+jumpi       
+
+codesize    
+returndatasize
+returndatasize
+codecopy    
+ 
+callvalue
+returndatasize
+returndatasize
+create
+
+returndatasize
+mstore
+
+push1 32
+returndatasize
+return
+
+jumpdest
+returndatasize
+selfdestruct
