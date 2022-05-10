@@ -4,7 +4,7 @@
 
 #store in memory
 number
-returndatasize #cheap workaroud to push 0 on the stack if no external call made
+returndatasize #cheap workaroud to push 0 on the stack
 mstore
 
 #return from memory
