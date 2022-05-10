@@ -1,5 +1,5 @@
 # Minimum runtime bytecode for a contract that returns true 
-# if the input is a prime number, false otherwise.
+# if the input is a prime number, false otherwise. ~@the_ethernaut
 # @author : @721Orbit
 
 chainid

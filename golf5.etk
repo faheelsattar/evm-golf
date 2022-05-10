@@ -1,6 +1,6 @@
 # Minimal runtime bytecode for a contract that creates a copy of 
 # itself and returns the offspring address whenever interacted 
-# with anything other than zero, otherwise self destructs.
+# with anything other than zero, otherwise self destructs. ~@the_ethernaut
 # @author: @721Orbit
 
 returndatasize 

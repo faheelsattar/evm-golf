@@ -1,5 +1,5 @@
 # Minimal runtime bytecode to return the total supply of sUSD, save it to storage, 
-# along with who made the query, and the timestamp of the query.
+# along with who made the query, and the timestamp of the query. ~@the_ethernaut
 # @author: @721Orbit
 
 

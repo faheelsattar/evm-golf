@@ -1,5 +1,5 @@
 # Minimal runtime bytecode for a contract that returns the 
-# square root of the calldata as a uint.
+# square root of the calldata as a uint. ~@the_ethernaut
 # @author: @721Orbit
 
 chainid
