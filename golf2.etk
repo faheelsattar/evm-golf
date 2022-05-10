@@ -14,7 +14,7 @@ push1 1
 sstore
 
 # etk helps you compute function signatures right of the bat
-%push(selector("totalSupply()"))
+%push(selector("totalSupply()")) #push => 0x18160ddd
 returndatasize
 mstore
 
