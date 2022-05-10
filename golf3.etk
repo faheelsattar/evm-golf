@@ -3,29 +3,29 @@
 # @author: @721Orbit
 
 push5 0x68656c6c6f #hello   
-returndatasize
-calldataload
+returndatasize #offset
+calldataload #load data from calldata from the certain offset
   
 push5 0x776f726c64 #world
 returndatasize
 mstore
 
-push1 0xd8
-shr
+push1 0xd8  
+shr #inorder to remove 0's from the lsb
 
-push1 0x42
+push1 0x42 #42 to be added in the memory
 push1 0x32
 mstore
 
-eq
-push1 0x20
-jumpi
+eq #check equality from stack
+push1 0x20 
+jumpi #if success jump to 20
 
 push1 0x32
 dup1
 return
 
-jumpdest
+jumpdest #dest
 push1 0x32
 returndatasize
-return
+return #return from memory
