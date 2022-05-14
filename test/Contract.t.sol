@@ -4,10 +4,7 @@ pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
 import "forge-std/console.sol";
 
-import "src/Contract.sol";
-
 contract TestContract is Test {
-    Contract c;
     address contractAddress;
     address user;
     address sUSD;
@@ -31,11 +28,10 @@ contract TestContract is Test {
     }
 
     function setUp() public {
-        c = new Contract();
         createHelperAddress();
         sUSD = address(0x57Ab1ec28D129707052df4dF418D58a2D46d5f51);
         user = address(0x1233);
-        timestamp = 1770;
+        timestamp = 0x6ea;
         vm.etch(contractAddress, abi.encodePacked(bytecode));
     }
 
